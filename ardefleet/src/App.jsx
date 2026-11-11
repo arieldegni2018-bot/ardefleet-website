@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './App.css';
 
+export default function App() {
   const [count, setCount] = useState(0);
 
   return (
@@ -12,7 +13,6 @@ import './App.css';
       padding: '40px 20px',
       textAlign: 'center' 
     }}>
-      {/* Header / Logo section */}
       <h1 style={{ fontSize: '3rem', fontWeight: 'bold', margin: '10px 0', color: '#1b4332' }}>
         ARDE FLEET
       </h1>
@@ -20,7 +20,6 @@ import './App.css';
         Reliable. Efficient. Everywhere.
       </p>
 
-      {/* Main Services Banner Section */}
       <div style={{ 
         backgroundColor: '#1b4332', 
         color: '#ffffff', 
@@ -49,4 +48,4 @@ import './App.css';
       </div>
     </div>
   );
-export default App
+}
