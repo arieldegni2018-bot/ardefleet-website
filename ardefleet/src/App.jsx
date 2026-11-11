@@ -16,8 +16,9 @@ function App() {
           <img src={viteLogo} className="vite" alt="Vite logo" />
         </div>
         <div>
-          <h1>Get started</h1>
+          <h1>ARDEFleet</h1>
           <p>
+
             Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
           </p>
         </div>
@@ -29,7 +30,6 @@ function App() {
           Count is {count}
         </button>
       </section>
-
       <div className="ticks"></div>
 
       <section id="next-steps">
@@ -113,8 +113,7 @@ function App() {
         </div>
       </section>
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
+<section id="spacer"></section>
     </>
   )
 }
