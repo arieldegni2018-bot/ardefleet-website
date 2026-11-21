@@ -1,16 +1,14 @@
-# React + Vite
+# ARDE Fleet
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+## Run locally
 
-Currently, two official plugins are available:
+1. Install dependencies with `npm install`.
+2. In pgAdmin, create a PostgreSQL database named `ardefleet`.
+3. Create a local `.env` file containing `DATABASE_URL=postgresql://USER:PASSWORD@localhost:5432/ardefleet`. URL-encode special characters in the password.
+4. Initialize the shipments table with `npm run db:init`.
+5. In one terminal, start the API with `npm start`.
+6. In another terminal, start the frontend with `npm run dev`, then open the local address Vite prints.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Check the API and database connection at `http://localhost:5000/api/health`. Shipment data is available at `http://localhost:5000/api/shipments`.
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+The `.env` file is local and ignored by Git. Never commit or share its contents. If a password has been exposed, change the PostgreSQL password and update `.env`.

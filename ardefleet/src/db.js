@@ -1,28 +1,9 @@
-const shipments = [
-  {
-    id: 1,
-    customer_name: 'Northwind Traders',
-    pickup_location: 'Seattle, WA',
-    status: 'In transit',
-  },
-  {
-    id: 2,
-    customer_name: 'BluePeak Logistics',
-    pickup_location: 'Denver, CO',
-    status: 'Scheduled',
-  },
-  {
-    id: 3,
-    customer_name: 'Summit Retail Group',
-    pickup_location: 'Dallas, TX',
-    status: 'Delivered',
-  },
-];
+import 'dotenv/config';
+import pkg from 'pg';
+const { Pool } = pkg;
 
-const pool = {
-  async query() {
-    return { rows: shipments };
-  },
-};
+const pool = new Pool({
+  connectionString: process.env.DATABASE_URL,
+});
 
 export default pool;
